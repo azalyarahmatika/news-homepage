@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" lang="en">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | News Homepage</title>
+
+  <style>
+    .inactive {
+      filter: brightness(80%) grayscale(50%);
+    }
+  </style>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            soft_orange: 'hsl(35, 77%, 62%)',
+            soft_red: 'hsl(5, 85%, 63%)',
+            off_white: 'hsl(36, 100%, 99%)',
+            grayish_blue: 'hsl(233, 8%, 79%)',
+            dark_grayish_blue: 'hsl(236, 13%, 42%)',
+            very_dark_blue: 'hsl(240, 100%, 5%)',
+          },
+          fontFamily: {
+            inter: "Inter, sans-serif"
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="font-inter p-4 bg-off_white lg:px-32 md:px-16">
+  <nav class="flex items-center place-content-between pt-3 pb-6">
+    <img class="h-8" src="./assets/images/logo.svg" alt="Logo">
+    <img class="sm:hidden burger_menu" src="./assets/images/icon-menu.svg" alt="Menu">
+
+    <ul class="text-sm hidden sm:flex sm:gap-10 sm:place-content-between text-dark_grayish_blue">
+      <li class="sm:hover:text-soft_red cursor-pointer">Home</li>
+      <li class="sm:hover:text-soft_red cursor-pointer">New</li>
+      <li class="sm:hover:text-soft_red cursor-pointer">Popular</li>
+      <li class="sm:hover:text-soft_red cursor-pointer">Trending</li>
+      <li class="sm:hover:text-soft_red cursor-pointer">Categories</li>
+    </ul>
+
+    <div class="absolute right-0 top-0 h-screen w-[60%] bg-white pt-7 pl-5 pr-4 hidden mobile_menu z-10">
+      <img class="float-right close_menu" src="./assets/images/icon-menu-close.svg" alt="Close">
+
+      <ul class="mt-20 text-sm leading-9">
+        <li class="hover:text-soft_red cursor-pointer">Home</li>
+        <li class="hover:text-soft_red cursor-pointer">New</li>
+        <li class="hover:text-soft_red cursor-pointer">Popular</li>
+        <li class="hover:text-soft_red cursor-pointer">Trending</li>
+        <li class="hover:text-soft_red cursor-pointer">Categories</li>
+      </ul>
+      
+    </div>
+  </nav>
+
+  <header class="lg:flex lg:gap-6 body_page">
+    <div class="mb-10 lg:mb-0 basis-[65%] shrink-0 ">
+      <div>
+        <img class="md:hidden w-full" src="./assets/images/image-web-3-mobile.jpg" alt="">
+        <img class="hidden md:block" src="./assets/images/image-web-3-desktop.jpg" alt="">
+      </div>
+      <div class="lg:flex lg:gap-9 lg:items-center lg:mt-2">
+        <h1 class="text-4xl sm:text-5xl font-extrabold py-4 sm:basis-[45%] shrink-0">The Bright Future of Web 3.0?</h1>
+        <div>
+          <p class="text-dark_grayish_blue text-sm mb-3 leading-6">We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. But is it really fulfilling its promise?</p>
+          <button class="font-bold tracking-wider text-sm bg-soft_red py-2 px-6 text-very_dark_blue hover:text-soft_red hover:bg-very_dark_blue">READ MORE</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-very_dark_blue text-grayish_blue p-5 basis-[35%] ">
+      <h2 class="text-soft_orange font-bold text-2xl sm:text-3xl">New</h2>
+      <div class="py-6">
+        <h3 class="font-bold text-white mb-2 hover:text-soft_orange">Hydrogen VS Electric Cars</h3>
+        <p class="text-sm leading-6">Will hydrogen-fueled cars ever catch up to EVs?</p>
+      </div>
+      <div class="border-y py-6">
+        <h3 class="font-bold text-white mb-2 hover:text-soft_orange">The Downsides of AI Artistry</h3>
+        <p class="text-sm leading-6">What are the possible adverse effects of on-demand AI image generation?</p>
+      </div>
+      <div class="pt-6">
+        <h3 class="font-bold text-white mb-2 hover:text-soft_orange">Is VC Funding Drying Up?</h3>
+        <p class="text-sm leading-6">Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
+      </div>
+    </div>
+  </header>
+  
+  <article class="mt-10 lg:flex lg:gap-3">
+    <div class="flex h-[100px] gap-4 mb-6">
+      <img src="./assets/images/image-retro-pcs.jpg" alt="Retro PC">
+      <div class="space-y-1 flex flex-col justify-center">
+        <p class="font-bold text-soft_red text-xl">01</p>
+        <p class="font-bold text-sm hover:text-soft_red cursor-pointer">Reviving Retro PCs</p>
+        <p class="text-sm">What happens when old PCs are given modern upgrades?</p>
+      </div>
+    </div>
+
+    <div class="flex h-[100px] gap-4 mb-6">
+      <img src="./assets/images/image-top-laptops.jpg" alt="">
+      <div class="space-y-1 flex flex-col justify-center">
+        <p class="font-bold text-soft_red text-xl">02</p>
+        <p class="font-bold text-sm hover:text-soft_red cursor-pointer">Top 10 Laptops of 2022</p>
+        <p class="text-sm">Our best picks for various needs and budgets.</p>
+      </div>
+    </div>
+
+    <div class="flex h-[100px] gap-4 mb-6">
+      <img src="./assets/images/image-gaming-growth.jpg" alt="">
+      <div class="space-y-1 flex flex-col justify-center">
+        <p class="font-bold text-soft_red text-xl">03</p>
+        <p class="font-bold text-sm hover:text-soft_red cursor-pointer">The Growth of Gaming</p>
+        <p class="text-sm">How the pandemic has sparked fresh opportunities.</p>
+      </div>
+    </div>
+  </article>
+  
+  
+  <div class="text-center mt-3 mb-1 text-xs text-dark_grayish_blue">
+    Challenge by <a class="text-soft_orange font-bold" href="https://www.frontendmentor.io/challenges/news-homepage-H6SWTa1MFl" target="_blank">Frontend Mentor</a>. 
+    Coded by <a class="text-soft_orange font-bold" href="https://azalyarahmatika.com" target="_blank">Azalya Rahmatika</a>.
+  </div>
+  
+  <script>
+    let burgerMenu = document.querySelector('.burger_menu');
+    let closeMenu = document.querySelector('.close_menu');
+    let mobileMenu = document.querySelector('.mobile_menu');
+    let bodyPage = document.querySelector('.body_page');
+
+    burgerMenu.addEventListener('click', () => {
+      burgerMenu.classList.add('hidden');
+      mobileMenu.classList.remove('hidden');
+      bodyPage.classList.add('inactive')
+    })
+
+    closeMenu.addEventListener('click', () => {
+      burgerMenu.classList.remove('hidden');
+      mobileMenu.classList.add('hidden');
+      bodyPage.classList.remove('inactive');
+    })
+  </script>
+</body>
+</html>
